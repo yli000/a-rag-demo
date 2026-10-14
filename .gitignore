@@ -8,6 +8,7 @@ config/config.ini
 *.key
 
 # 数据、模型与生成结果
+/models/
 **/data/
 **/log/
 **/logs/
