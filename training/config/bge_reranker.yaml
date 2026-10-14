@@ -1,0 +1,41 @@
+# 模型
+model_name_or_path: "models/BAAI/bge-reranker-v2-m3"
+model_type: "bert_encoder"
+num_labels: 1
+query_format: "{}"
+document_format: "{}"
+
+
+# 逐点排序数据集
+train_dataset: "data/rerank_data/train.json"
+train_dataset_type: "pointwise"
+max_label: 2
+min_label: 0
+max_len: 4096
+shuffle_rate: 0.0
+train_label_key: "label"
+val_dataset: "data/rerank_data/dev.json"
+val_dataset_type: "pointwise"
+val_label_key: "label"
+loss_type: "pointwise_bce"  # 可选损失：逐点二元交叉熵或均方误差
+
+# 训练
+output_dir: "./output/bert"
+
+# 模型保存
+save_on_epoch_end: 1
+num_max_checkpoints: 5
+
+# 超参数
+epochs: 1
+lr: 5e-5
+batch_size: 8
+seed: 42
+warmup_proportion: 0.1
+stable_proportion: 0.0
+gradient_accumulation_steps: 2
+mixed_precision: fp16
+
+# 日志
+log_interval: 10
+log_with: "tensorboard" # 可选日志后端：wandb 或 tensorboard

@@ -1,0 +1,5 @@
+# 量化与模型服务的附加依赖；训练工具按其官方说明单独安装。
+-r requirements.txt
+accelerate==1.7.0
+autoawq==0.2.9
+vllm==0.9.0.1

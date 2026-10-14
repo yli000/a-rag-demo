@@ -1,0 +1,5 @@
+model_name_or_path: output/qwen3_lora_sft/
+adapter_name_or_path: saves/qwen3-8b/lora/sft/checkpoint-300/
+template: qwen3
+infer_backend: huggingface  # 可选推理后端：huggingface、vllm、sglang
+trust_remote_code: true

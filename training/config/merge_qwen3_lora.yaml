@@ -1,0 +1,13 @@
+# 合并 LoRA 适配器时，使用未量化的基座模型，不设置量化位数。
+
+# 模型
+model_name_or_path: models/Qwen3-8B/
+adapter_name_or_path: saves/qwen3-8b/lora/sft
+template: qwen3
+trust_remote_code: true
+
+# 导出
+export_dir: output/qwen3_lora_sft
+export_size: 5
+export_device: cpu  # 可选导出设备：cpu、auto
+export_legacy_format: false
