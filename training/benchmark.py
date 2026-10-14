@@ -13,6 +13,8 @@ import numpy as np
 logger = logging.getLogger(__name__)
 REQUEST_LATENCY: List[Tuple[int, int, float]] = []
 
+# 本脚本使用字符串长度计数，统计单位为字符，不代表模型词元数量。
+
 API_URL = 'http://localhost:8000/v1/chat/completions'
 
 HEADERS = {
@@ -95,15 +97,15 @@ def main():
             for prompt_len, output_len, latency in REQUEST_LATENCY
         ]
     )
-    print(f"Average latency per token: {avg_per_token_latency:.4f} s")
+    print(f"Average latency per character: {avg_per_token_latency:.4f} s")
     avg_per_output_token_latency = np.mean(
         [latency / output_len for _, output_len, latency in REQUEST_LATENCY]
     )
-    print("Average latency per output token: " f"{avg_per_output_token_latency:.4f} s")
+    print("Average latency per output character: " f"{avg_per_output_token_latency:.4f} s")
     throughput = (
             sum([output_len for _, output_len, _ in REQUEST_LATENCY]) / benchmark_time
     )
-    print(f"Throughput: {throughput} tokens/s")
+    print(f"Throughput: {throughput} characters/s")
 
 
 if __name__ == '__main__':

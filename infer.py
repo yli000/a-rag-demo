@@ -56,7 +56,7 @@ while True:
     res_handler = request_chat(query, context, stream=True)
     response = ""
     for r in res_handler:
-        uttr = r.choices[0].delta.content
+        uttr = r.choices[0].delta.content or ""
         response += uttr
         print(uttr, end='')
     print("\n" + "="*100)
