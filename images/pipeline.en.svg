@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 570" width="1000" height="570" font-family="-apple-system,'Segoe UI',Helvetica,Arial,'Noto Sans','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="570" fill="#ffffff"/>
+
+  <!-- ========== Indexing ========== -->
+  <text x="20" y="29" font-size="15" font-weight="700" fill="#111827">Indexing</text>
+  <text x="90" y="29" font-size="12" fill="#6b7280">once per document</text>
+
+  <rect x="20" y="50" width="120" height="80" rx="8" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="80" y="84" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">PDF</text>
+  <text x="80" y="106" font-size="12" fill="#374151" text-anchor="middle">e.g. a car manual</text>
+
+  <rect x="180" y="50" width="140" height="80" rx="8" fill="#eef3fc" stroke="#3b6fd8" stroke-width="1.5"/>
+  <text x="250" y="76" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">Parse</text>
+  <text x="250" y="97" font-size="12" fill="#374151" text-anchor="middle">text, images, captions</text>
+  <text x="250" y="117" font-size="11.5" fill="#6b7280" text-anchor="middle">PyMuPDF</text>
+
+  <rect x="360" y="50" width="140" height="80" rx="8" fill="#eef3fc" stroke="#3b6fd8" stroke-width="1.5"/>
+  <text x="430" y="76" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">Clean up</text>
+  <text x="430" y="97" font-size="12" fill="#374151" text-anchor="middle">tidy extracted text</text>
+  <text x="430" y="117" font-size="11.5" fill="#6b7280" text-anchor="middle">LLM API</text>
+
+  <rect x="540" y="50" width="160" height="80" rx="8" fill="#eef3fc" stroke="#3b6fd8" stroke-width="1.5"/>
+  <text x="620" y="76" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">Split</text>
+  <text x="620" y="97" font-size="12" fill="#374151" text-anchor="middle">parent and child chunks</text>
+  <text x="620" y="117" font-size="11.5" fill="#6b7280" text-anchor="middle">m3e-small</text>
+
+  <text x="740" y="33" font-size="12" font-weight="700" fill="#6b7280">Storage</text>
+  <rect x="740" y="40" width="240" height="112" rx="8" fill="#eef3fc" stroke="#3b6fd8" stroke-width="1.5"/>
+  <text x="756" y="66" font-size="13.5" font-weight="700" fill="#111827">Text, pages, images</text>
+  <text x="964" y="66" font-size="11.5" fill="#6b7280" text-anchor="end">MongoDB</text>
+  <line x1="752" y1="78" x2="968" y2="78" stroke="#c7d6f3"/>
+  <text x="756" y="100" font-size="13.5" font-weight="700" fill="#111827">Keyword index</text>
+  <text x="964" y="100" font-size="11.5" fill="#6b7280" text-anchor="end">BM25</text>
+  <line x1="752" y1="112" x2="968" y2="112" stroke="#c7d6f3"/>
+  <text x="756" y="134" font-size="13.5" font-weight="700" fill="#111827">Vector index</text>
+  <text x="964" y="134" font-size="11.5" fill="#6b7280" text-anchor="end">Milvus · BGE-M3</text>
+
+  <line x1="140" y1="90" x2="178" y2="90" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="320" y1="90" x2="358" y2="90" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="500" y1="90" x2="538" y2="90" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="700" y1="90" x2="738" y2="90" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <path d="M860,152 L860,216 L250,216 L250,262" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="555" y="209" font-size="11.5" fill="#6b7280" text-anchor="middle">retrieval queries both indexes</text>
+
+  <!-- ========== Answering ========== -->
+  <text x="20" y="261" font-size="15" font-weight="700" fill="#111827">Answering</text>
+  <text x="20" y="279" font-size="11.5" fill="#6b7280">per question</text>
+
+  <rect x="20" y="310" width="120" height="90" rx="8" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="80" y="352" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">Question</text>
+  <text x="80" y="374" font-size="12" fill="#374151" text-anchor="middle">user input</text>
+
+  <!-- two searches -->
+  <rect x="170" y="264" width="160" height="156" rx="10" fill="none" stroke="#9fd3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <rect x="180" y="274" width="140" height="64" rx="8" fill="#eaf6f0" stroke="#2e9e6a" stroke-width="1.5"/>
+  <text x="250" y="295" font-size="14.5" font-weight="700" fill="#111827" text-anchor="middle">Keyword search</text>
+  <text x="250" y="313" font-size="12" fill="#374151" text-anchor="middle">by shared words</text>
+  <text x="250" y="330" font-size="11.5" fill="#6b7280" text-anchor="middle">BM25</text>
+  <rect x="180" y="348" width="140" height="64" rx="8" fill="#eaf6f0" stroke="#2e9e6a" stroke-width="1.5"/>
+  <text x="250" y="369" font-size="14.5" font-weight="700" fill="#111827" text-anchor="middle">Vector search</text>
+  <text x="250" y="387" font-size="12" fill="#374151" text-anchor="middle">by vector similarity</text>
+  <text x="250" y="404" font-size="11.5" fill="#6b7280" text-anchor="middle">BGE-M3</text>
+
+  <!-- Merge -->
+  <rect x="355" y="310" width="120" height="90" rx="8" fill="#eaf6f0" stroke="#2e9e6a" stroke-width="1.5"/>
+  <text x="415" y="342" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">Merge</text>
+  <text x="415" y="364" font-size="12.5" fill="#374151" text-anchor="middle">swap in parents,</text>
+  <text x="415" y="381" font-size="12.5" fill="#374151" text-anchor="middle">deduplicate</text>
+
+  <!-- Rerank -->
+  <rect x="505" y="310" width="150" height="90" rx="8" fill="#fbf1e6" stroke="#d9822b" stroke-width="1.5"/>
+  <text x="580" y="335" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">Rerank</text>
+  <text x="580" y="356" font-size="12.5" fill="#374151" text-anchor="middle">score each chunk,</text>
+  <text x="580" y="373" font-size="12.5" fill="#374151" text-anchor="middle">keep the top few</text>
+  <text x="580" y="391" font-size="11.5" fill="#6b7280" text-anchor="middle">bge-reranker-v2-m3</text>
+
+  <!-- Generate -->
+  <rect x="685" y="310" width="150" height="90" rx="8" fill="#f3eefa" stroke="#8455c8" stroke-width="1.5"/>
+  <text x="760" y="335" font-size="15" font-weight="700" fill="#111827" text-anchor="middle">Generate</text>
+  <text x="760" y="356" font-size="12.5" fill="#374151" text-anchor="middle">answer with citations,</text>
+  <text x="760" y="373" font-size="12.5" fill="#374151" text-anchor="middle">or “no answer”</text>
+  <text x="760" y="391" font-size="11.5" fill="#6b7280" text-anchor="middle">Qwen3-8B</text>
+
+  <!-- Add sources -->
+  <rect x="860" y="310" width="120" height="90" rx="8" fill="#f3eefa" stroke="#8455c8" stroke-width="1.5"/>
+  <text x="920" y="342" font-size="14.5" font-weight="700" fill="#111827" text-anchor="middle">Add sources</text>
+  <text x="920" y="364" font-size="12" fill="#374151" text-anchor="middle">map citations</text>
+  <text x="920" y="381" font-size="12" fill="#374151" text-anchor="middle">to pages, images</text>
+
+  <path d="M140,355 L160,355 L160,306 L178,306" fill="none" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M160,355 L160,380 L178,380" fill="none" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M320,306 L338,306 L338,355 L353,355" fill="none" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M320,380 L338,380 L338,355" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <line x1="475" y1="355" x2="503" y2="355" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="655" y1="355" x2="683" y2="355" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="835" y1="355" x2="858" y2="355" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ========== Example ========== -->
+  <text x="20" y="446" font-size="12" font-weight="700" fill="#6b7280">Example</text>
+  <g font-size="12" fill="#374151">
+    <rect x="20" y="456" width="120" height="78" rx="6" fill="#fafafa" stroke="#d1d5db" stroke-dasharray="4 3"/>
+    <text x="30" y="478">What can the</text>
+    <text x="30" y="496">dashboard</text>
+    <text x="30" y="514">display?</text>
+
+    <rect x="180" y="456" width="140" height="78" rx="6" fill="#fafafa" stroke="#d1d5db" stroke-dasharray="4 3"/>
+    <text x="190" y="478">keyword search: 10</text>
+    <text x="190" y="496">vector search: 10</text>
+
+    <rect x="355" y="456" width="120" height="78" rx="6" fill="#fafafa" stroke="#d1d5db" stroke-dasharray="4 3"/>
+    <text x="365" y="478">8 parent chunks</text>
+    <text x="365" y="496">after dedup</text>
+
+    <rect x="505" y="456" width="150" height="78" rx="6" fill="#fafafa" stroke="#d1d5db" stroke-dasharray="4 3"/>
+    <text x="515" y="478">top 5, numbered</text>
+    <text x="515" y="496">【1】…【5】</text>
+    <text x="515" y="514">sent to the model</text>
+
+    <rect x="685" y="456" width="150" height="78" rx="6" fill="#fafafa" stroke="#d1d5db" stroke-dasharray="4 3"/>
+    <text x="695" y="478">The cluster shows</text>
+    <text x="695" y="496">speed, RPM, fuel</text>
+    <text x="695" y="514">level, etc. 【1, 3】</text>
+
+    <rect x="860" y="456" width="120" height="78" rx="6" fill="#fafafa" stroke="#d1d5db" stroke-dasharray="4 3"/>
+    <text x="870" y="478">Pages: 41, 43</text>
+    <text x="870" y="496">Image: Figure 12</text>
+  </g>
+
+  <text x="980" y="558" font-size="11.5" fill="#6b7280" text-anchor="end">Gray text in boxes: models and tools used here, replaceable. The example is illustrative.</text>
+</svg>
